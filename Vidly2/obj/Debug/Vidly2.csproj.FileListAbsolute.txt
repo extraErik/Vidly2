@@ -106,3 +106,14 @@ C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\Micro
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.csproj.CopyComplete
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.dll
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.pdb
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.InitialModel.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.csproj.GenerateResource.cache
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddIsSubscribedToCustomer.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddMembershipType.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateMembershipTypes.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.ApplyAnnotationsToCustomerName.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddNameToMembershipType.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.UpdatePopulateMembershipTypes.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddBirthDateToCustomer.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddGenreTypeModel.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateGenreTypes.resources
