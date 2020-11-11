@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly2.Models;
+using Vidly2.ViewModels;
 
 namespace Vidly2.Controllers
 {
@@ -20,6 +21,41 @@ namespace Vidly2.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+
+        public ActionResult New()
+        {
+            var genreTypes = _context.GenreTypes.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                GenreTypes = genreTypes
+            };
+            return View("MovieForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+
+                // Udemy teacher says: look into AutoMapper to simplify this without using
+                // Microsoft's suggested approach of TryUpdateModel which he says has security and other problems
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.DateAdded = movie.DateAdded;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.GenreTypeId = movie.GenreTypeId;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
         }
 
         public ActionResult Index()
@@ -43,6 +79,26 @@ namespace Vidly2.Controllers
                 return HttpNotFound();
             }
 
+        }
+
+        [Route("movies/edit/{id}")]
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    GenreTypes = _context.GenreTypes.ToList()
+                };
+                return View("MovieForm", viewModel);
+            }
         }
     }
 }

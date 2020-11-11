@@ -8,6 +8,11 @@
 
 <br />
 
+<a href="/movies/new" class="btn btn-primary">New Movie</a>
+
+<br />
+<br />
+
 @if (!Model.Any())
 {
     <text>We have no movies.</text>
@@ -25,7 +30,7 @@ else
             @foreach (var movie in Model)
             {
             <tr>
-                <td><a href="/Movies/Details/@movie.Id">@movie.Name</a></td>
+                <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
                 <td>@movie.GenreType.Name</td>
             </tr>
             }

@@ -117,3 +117,4 @@ C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddBirthDateToCustomer.resources
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddGenreTypeModel.resources
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateGenreTypes.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.MakeMovieNameAndGenreRequired.resources
