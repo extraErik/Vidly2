@@ -26,7 +26,7 @@ namespace Vidly2.Controllers
         public ActionResult New()
         {
             var genreTypes = _context.GenreTypes.ToList();
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel()
             {
                 GenreTypes = genreTypes
             };
@@ -34,10 +34,21 @@ namespace Vidly2.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+                    GenreTypes = _context.GenreTypes.ToList()
+                };
+                return View("MovieForm", viewModel);
+            }
+
             if (movie.Id == 0)
             {
+                movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
             }
             else
@@ -48,7 +59,6 @@ namespace Vidly2.Controllers
                 // Microsoft's suggested approach of TryUpdateModel which he says has security and other problems
                 movieInDb.Name = movie.Name;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
-                movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.NumberInStock = movie.NumberInStock;
                 movieInDb.GenreTypeId = movie.GenreTypeId;
             }
@@ -92,11 +102,11 @@ namespace Vidly2.Controllers
             }
             else
             {
-                var viewModel = new MovieFormViewModel
+                var viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
                     GenreTypes = _context.GenreTypes.ToList()
                 };
+                
                 return View("MovieForm", viewModel);
             }
         }
