@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -20,9 +21,17 @@ namespace Vidly2.Controllers.Api
         }
 
         // GET /api/customers
-        public IEnumerable<CustomerDto> GetCustomers()
+        //public IEnumerable<CustomerDto> GetCustomers()
+        public HttpResponseMessage GetCustomers()
         {
-            return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            //return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+
+            var customerDto = _context.Customers
+                .Include(c => c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);
+
+            return Request.CreateResponse(HttpStatusCode.OK, customerDto);
         }
 
         // GET /api/customers/1
