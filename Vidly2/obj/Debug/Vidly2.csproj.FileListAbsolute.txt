@@ -126,3 +126,5 @@ C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\Syste
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\System.Web.Http.WebHost.xml
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\AutoMapper.dll
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\AutoMapper.xml
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.SeedUsers.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddDrivingLicenseToApplicationUser.resources
