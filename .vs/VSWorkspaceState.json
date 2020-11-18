@@ -3,9 +3,10 @@
     "",
     "\\Vidly2",
     "\\Vidly2\\App_Data",
+    "\\Vidly2\\App_Start",
     "\\Vidly2\\Controllers",
     "\\Vidly2\\Migrations"
   ],
-  "SelectedNode": "\\Vidly2\\Migrations\\202011101832187_InitialModel.cs",
+  "SelectedNode": "\\Vidly2\\App_Start\\Startup.Auth.cs",
   "PreviewInSolutionExplorer": false
 }

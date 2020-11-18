@@ -128,3 +128,5 @@ C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\AutoM
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\bin\AutoMapper.xml
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.SeedUsers.resources
 C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddDrivingLicenseToApplicationUser.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddRentalModel.resources
+C:\Users\erygg\Documents\Dev Learning\ASP-NET MVC - Mosh\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddNumberAvailableToMovie.resources

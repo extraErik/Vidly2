@@ -22,12 +22,18 @@ namespace Vidly2.Controllers.Api
 
         // GET /api/customers
         //public IEnumerable<CustomerDto> GetCustomers()
-        public HttpResponseMessage GetCustomers()
+        public HttpResponseMessage GetCustomers(string query = null)
         {
+            var customersQuery = _context.Customers.Include(c => c.MembershipType);
+
+            if (!String.IsNullOrWhiteSpace(query))
+            {
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+            }
+
             //return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
 
-            var customerDto = _context.Customers
-                .Include(c => c.MembershipType)
+            var customerDto = customersQuery
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
@@ -51,6 +57,9 @@ namespace Vidly2.Controllers.Api
         // NOTE: lines commented out below because not working, found possible
         // solution (in lines added below them) from
         // https://developer.okta.com/blog/2019/03/13/build-rest-api-with-aspnet-web-api
+        //
+        //
+        // UPDATE: instead of throw new BadRequest(), try "return BadRequest()"...
         //
         // POST /api/customers
         [HttpPost]
